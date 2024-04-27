@@ -1,1 +1,69 @@
-<p>Main Page</p>
+<div>
+  <mat-form-field class="input_field">
+    <mat-label>Input</mat-label>
+    <input
+      #message
+      (focus)="isActive = true"
+      (blur)="isActive = false"
+      type="text"
+      [(ngModel)]="valueInput"
+      matInput />
+  </mat-form-field>
+  <br>
+  <button
+    mat-raised-button
+    [disabled]="isActive"
+    (click)="sendDate(message.value)"
+  >
+    {{valueInput}}
+  </button>
+  <br>
+  <button
+    mat-raised-button
+    (click)="sendDate($event)"
+  >
+    Event
+  </button>
+</div>
+<div>
+  <button appHostListener mat-raised-button>Хост</button>
+  <br>
+  <button *ngIf="isActive" appHostListener2 (buttonClick)="sendDate(message.value)" mat-raised-button>Хост 2</button>
+</div>
+
+<div>
+  <app-parent></app-parent>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let car of cars; let i = index">
+        {{i + 1}}. {{car.name}}, {{car.year}}
+    </li>
+</ul>
+</div>
+
+<div>
+  <ng-container *ngFor="let car of cars">
+    <p [textContent]="car.name"></p>
+
+    <p [textContent]="car.year"></p>
+
+    <div [ngSwitch]="car.name">
+      <p *ngSwitchCase="'Audi'">This is Audi</p>
+      <p *ngSwitchCase="'BMW'">This is BMW</p>
+      <p *ngSwitchCase="'Mercedes'">This is Mercedes</p>
+
+      <p *ngSwitchDefault>Car is undefined</p>
+  </div>
+</ng-container>
+</div>
+
+<div>
+  <p>This text is normal.</p>
+<p [zoom]="20">This text is larger.</p>
+</div>
+<div *duplicateContent="false">Content for duplication</div>
+<div>
+  <p>{{bigText | cutText}}</p>
+</div>

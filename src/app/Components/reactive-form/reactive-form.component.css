@@ -1,0 +1,18 @@
+.form_div{
+  padding: 20px;
+}
+.form{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: solid 1px;
+  border-radius: 5px;
+}
+.input{
+  width: auto;
+}
+
+.book{
+  margin-top: 20px;
+  padding: 20px;
+}

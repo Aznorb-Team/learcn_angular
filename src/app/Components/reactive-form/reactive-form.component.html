@@ -1,0 +1,29 @@
+<form [formGroup]="buyTicketForm" class="form" novalidate>
+  <div class="input">
+    <mat-form-field class="input_field">
+      <mat-label>Passenger</mat-label>
+      <input formControlName="passenger" type="text" matInput />
+    </mat-form-field>
+  </div>
+  <div class="input">
+    <mat-form-field class="input_field">
+      <mat-label>Age</mat-label>
+      <input formControlName="passengerAge" type="number" matInput />
+    </mat-form-field>
+  </div>
+
+  <div formGroupName="passengerContacts">
+    <div class="input">
+      <mat-form-field class="input_field">
+        <mat-label>Telegram</mat-label>
+        <input formControlName="telegram" type="text" matInput />
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field class="input_field">
+        <mat-label>Whatsapp</mat-label>
+        <input formControlName="whatsapp" type="text" matInput />
+      </mat-form-field>
+    </div>
+  </div>
+</form>

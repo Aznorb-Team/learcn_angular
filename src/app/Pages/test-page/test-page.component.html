@@ -1,0 +1,39 @@
+<div class="form_div">
+  <form class="form">
+    <div class="input">
+      <mat-form-field class="input_field">
+        <mat-label>Login</mat-label>
+        <input
+          type="text"
+          id="login"
+          name="login"
+          [(ngModel)]="loginForm.login"
+          matInput
+        />
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field class="input_field">
+        <mat-label>Пароль</mat-label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="loginForm.password"
+          required
+          matInput
+        />
+      </mat-form-field>
+    </div>
+
+    <button mat-flat-button color="primary" (click)="printForm()">Войти</button>
+  </form>
+</div>
+<br>
+<div class="book">
+  <books-list></books-list>
+</div>
+<div class="book">
+  <reactive-form></reactive-form>
+</div>
+
