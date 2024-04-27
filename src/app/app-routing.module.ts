@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './Pages/error-page/error-page.component';
 import { MainPageComponent } from './Pages/main-page/main-page.component';
 import { TestPageComponent } from './Pages/test-page/test-page.component';
+import { ApiViewComponent } from './Pages/api-view/api-view.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'test',
     component: TestPageComponent
+  },
+  {
+    path: 'api_view',
+    component: ApiViewComponent
   },
   {
     path: "**",

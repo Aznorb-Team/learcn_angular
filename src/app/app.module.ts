@@ -15,6 +15,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
 import { HostListenerDirective } from './Directives/host-listener.directive';
 import { HostListener2Directive } from './Directives/host-listener2.directive';
 import { TestPageComponent } from './Pages/test-page/test-page.component';
@@ -26,6 +30,9 @@ import { CutTextPipe } from './Pipes/cut-text.pipe';
 import { BooksListComponent } from './Components/Books/books-list/books-list.component';
 import { BooksItemComponent } from './Components/Books/books-item/books-item.component';
 import { ReactiveFormComponent } from './Components/reactive-form/reactive-form.component';
+import { ApiViewComponent } from './Pages/api-view/api-view.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,7 +49,9 @@ import { ReactiveFormComponent } from './Components/reactive-form/reactive-form.
     CutTextPipe,
     BooksListComponent,
     BooksItemComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ApiViewComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +63,13 @@ import { ReactiveFormComponent } from './Components/reactive-form/reactive-form.
     MatIconModule,
     MatDividerModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatCardModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSidenavModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
